@@ -45,13 +45,11 @@ import { LoadingSpinner } from "~/components/ui/loading-spinner";
 
 // Icons
 import {
-  CalendarIcon,
   ClockIcon,
   Plus,
   Trash2,
   GripVertical,
   Info,
-  Users,
   Settings,
   BookOpen,
 } from "lucide-react";
@@ -279,7 +277,7 @@ export const DialogCreateSession = () => {
                       <CardTitle>Informasi Dasar Sesi</CardTitle>
                     </CardHeader>
                     <CardContent className="space-y-4">
-                      <div className="grid grid-cols-2 gap-4">
+                      <div className="">
                         <FormField
                           control={form.control}
                           name="session_name"
@@ -292,26 +290,6 @@ export const DialogCreateSession = () => {
                                   {...field}
                                 />
                               </FormControl>
-                              <FormMessage />
-                            </FormItem>
-                          )}
-                        />
-
-                        <FormField
-                          control={form.control}
-                          name="session_code"
-                          render={({ field }) => (
-                            <FormItem>
-                              <FormLabel>Kode Sesi</FormLabel>
-                              <FormControl>
-                                <Input
-                                  placeholder="Kosongkan untuk dibuat otomatis"
-                                  {...field}
-                                />
-                              </FormControl>
-                              <FormDescription>
-                                Jika dikosongkan, kode akan dibuat otomatis
-                              </FormDescription>
                               <FormMessage />
                             </FormItem>
                           )}
